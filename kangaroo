@@ -1,0 +1,12 @@
+<?php
+
+$handle = fopen ("php://stdin","r");
+fscanf($handle,"%d %d %d %d",$x1,$v1,$x2,$v2);
+
+if ($v1 <= $v2) {
+echo "NO";
+} else {
+$kangaroos = ($x2 - $x1) % ($v2 - $v1) == 0;
+echo ($kangaroos ? "YES" : "NO");
+}
+?>
